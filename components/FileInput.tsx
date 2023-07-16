@@ -43,7 +43,10 @@ function FileInput(props: ComponentProps): JSX.Element {
             activateOnClick={false}
             openRef={openRef}
         >
-            <Center>
+            <Center sx={{
+                width: '100%',
+                height: '100vh',
+            }}>
                 Drop file over here to generate hash.
             </Center>
         </Dropzone.FullScreen>

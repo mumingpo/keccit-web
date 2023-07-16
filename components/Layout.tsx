@@ -5,7 +5,9 @@ import {
     Group,
     Title,
     Divider,
+    Anchor,
 } from '@mantine/core';
+import Link from 'next/link';
 
 type ComponentProps = {
     children: JSX.Element | JSX.Element[],
@@ -22,7 +24,11 @@ function Layout(props: ComponentProps): JSX.Element {
                     align="baseline"
                     sx={{ position: 'sticky', width: '100%' }}
                 >
-                <Title order={1} mx="md">Keccit</Title>
+                <Link href="/" passHref>
+                    <Anchor component="button">
+                        <Title order={1} mx="md">Kecc it!</Title>
+                    </Anchor>
+                </Link>
                 </Group>
                 <Divider mb="md" sx={{ width: '100%' }} />
                 { children }

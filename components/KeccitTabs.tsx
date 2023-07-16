@@ -22,6 +22,7 @@ function KeccitTabs(props: ComponentProps): JSX.Element {
     } = props;
     return (
         <Tabs
+            my="md"
             value={service}
             onTabChange={(val) => { toggleService(val ?? 'store'); }}
             variant="pills"

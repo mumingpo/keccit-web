@@ -1,6 +1,7 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
-import { MantineProvider } from "@mantine/core";
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { MantineProvider } from '@mantine/core';
+import { Notifications } from '@mantine/notifications';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -8,7 +9,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Keccit</title>
+        <title>Kecc it!</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
@@ -24,6 +25,7 @@ export default function App(props: AppProps) {
           // colorScheme: "dark",
         }}
       >
+        <Notifications />
         <Component {...pageProps} />
       </MantineProvider>
     </>

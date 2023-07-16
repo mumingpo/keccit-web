@@ -1,6 +1,6 @@
 function bytesToStr(bytes: ArrayBuffer): string {
     const view = new Uint8Array(bytes);
-    let str = '';
+    let str = '0x';
 
     view.forEach((val) => {
         let hex = val.toString(16);

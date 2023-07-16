@@ -1,13 +1,7 @@
 import * as React from 'react';
 import { Textarea, ActionIcon } from '@mantine/core';
 import { IconFile } from '@tabler/icons-react';
-
-function checkHash(s: string): string {
-    const pattern = /^(?:0x)?[0-9a-fA-F]{64}$/;
-    return pattern.test(s)
-        ? ''
-        : 'Hash must be a hex string encoding 32 bytes.';
-}
+import checkHash from '../utils/checkHash';
 
 type ComponentProps = {
     fileHash: string,
