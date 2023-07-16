@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/server": "^11.10.0",
-    "@mantine/core": "6.0.0",
-    "@mantine/hooks": "6.0.0",
-    "@mantine/next": "6.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@mantine/core": "^6.0.16",
+    "@mantine/dropzone": "^6.0.16",
+    "@mantine/hooks": "^6.0.16",
+    "@mantine/next": "^6.0.16",
+    "@metamask/sdk": "^0.5.2",
+    "@tabler/icons-react": "^2.25.0",
+    "ethereum-cryptography": "^2.1.2",
     "next": "13.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "web3": "^4.0.3"
   },
   "devDependencies": {
     "@types/node": "18.14.4",

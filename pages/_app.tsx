@@ -8,7 +8,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Keccit</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
@@ -20,8 +20,8 @@ export default function App(props: AppProps) {
         withGlobalStyles
         withNormalizeCSS
         theme={{
-          /** Put your mantine theme override here */
-          colorScheme: "dark",
+          // /** Put your mantine theme override here */
+          // colorScheme: "dark",
         }}
       >
         <Component {...pageProps} />
