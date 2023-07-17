@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { notifications } from '@mantine/notifications';
 import { MetaMaskSDK, SDKProvider } from '@metamask/sdk';
-
 const MAX_RETRY = 10;
 
 type FunctionProps = {
@@ -42,12 +41,35 @@ function useProvider() {
     React.useEffect(() => {
         // HACK: MetaMask is not set up for NextJs prerendering,
         // so putting generation in useEffect hook to bypass it.
-        const MMSDK = new MetaMaskSDK();
+        const MMSDK = new MetaMaskSDK({
+            dappMetadata: {
+            },
+            logging: {
+                developerMode: true,
+            },
+        });
         // HACK: MetaMask raises error if getProvider is called immediately
         // so keep trying to call it until things sorts out
         tryGetProvider({ setEthereum, sdk: MMSDK, retriesRemaining: MAX_RETRY });
-        // P.S.: If your SDK requires 2 "// Hack: ..." to initialize
-        // you are doing something seriously wrong.
+        // import('@metamask/sdk').then(({ MetaMaskSDK }) => {
+        //     // HACK: MetaMask is not set up for NextJs prerendering,
+        //     // so putting generation in useEffect hook to bypass it.
+        //     const MMSDK = new MetaMaskSDK({
+        //         dappMetadata: {
+        //         },
+        //         enableDebug: true,
+        //         preferDesktop: true,
+        //         logging: {
+        //             developerMode: true,
+        //         },
+        //     });
+
+        //     return MMSDK;
+        // }).then((sdk) => {
+        //     // HACK: MetaMask raises error if getProvider is called immediately
+        //     // so keep trying to call it until things sorts out
+        //     tryGetProvider({ setEthereum, sdk, retriesRemaining: MAX_RETRY });
+        // });
     }, []);
 
     return ethereum;
