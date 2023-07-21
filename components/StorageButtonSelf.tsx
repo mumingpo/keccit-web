@@ -77,7 +77,7 @@ function StorageButtonSelf(props: ComponentProps): JSX.Element {
             }
             onClick={ () => { handleClick().catch(handleError); } }
         >
-            Submit with MetaMask
+            Store with MetaMask
         </Button>
     );
 }

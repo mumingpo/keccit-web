@@ -1,18 +1,47 @@
 import * as React from 'react';
 import { Button } from '@mantine/core';
+import { notifications } from '@mantine/notifications'; // temp
 import { IconWallet } from '@tabler/icons-react';
 
-function VerifyButtonKeccit(): JSX.Element {
+import Recaptcha from './Recaptcha';
+import { verify } from '../utils/KeccitWalletOps';
+
+type ComponentProps = {
+    hash: string,
+};
+
+function VerifyButtonKeccit(props: ComponentProps): JSX.Element {
+    const { hash } = props;
+    const [recaptchaElem, setRecaptchaElem] = React.useState<JSX.Element | null>(null);
+
+    const onClick: React.MouseEventHandler = (e) => {
+        setRecaptchaElem((
+            <Recaptcha
+                x={ e.clientX }
+                y={ e.clientY }
+                callback={ (token) => {
+                    notifications.show({ message: token });
+                    verify({ hash, token });
+                } }
+                close={ () => { setRecaptchaElem(null); } }
+            />
+        ));
+    };
+
     return (
-        <Button
-            variant="light"
-            color="gray"
-            leftIcon={
-                <IconWallet />
-            }
-        >
-            Verify with Keccit
-        </Button>
+        <>
+            <Button
+                variant="light"
+                color="gray"
+                leftIcon={
+                    <IconWallet />
+                }
+                onClick={ onClick }
+            >
+                Verify with Keccit
+            </Button>
+            { recaptchaElem }
+        </>
     );
 }
 
