@@ -7,11 +7,11 @@ import Recaptcha from './Recaptcha';
 import { store } from '../utils/KeccitWalletOps';
 
 type ComponentProps = {
-    hash: string,
+    fileHash: string,
 };
 
 function StorageButtonKekkit(props: ComponentProps): JSX.Element {
-    const { hash } = props;
+    const { fileHash } = props;
     const [recaptchaElem, setRecaptchaElem] = React.useState<JSX.Element | null>(null);
 
     const onClick: React.MouseEventHandler = (e) => {
@@ -21,7 +21,7 @@ function StorageButtonKekkit(props: ComponentProps): JSX.Element {
                 y={ e.clientY }
                 callback={ (token) => {
                     notifications.show({ message: token });
-                    store({ hash, token });
+                    store({ hash: fileHash, token });
                 } }
                 close={ () => { setRecaptchaElem(null); } }
             />

@@ -7,7 +7,7 @@ import HashInput from '../components/HashInput';
 import Layout from '../components/Layout';
 import KeccitTabs from '../components/KeccitTabs';
 import StorageButtonSelf from '../components/StorageButtonSelf';
-import StorageButtonKekkit from '../components/StorageButtonKeccit';
+import StorageButtonKeccit from '../components/StorageButtonKeccit';
 import VerifyButtonSelf from '../components/VerifyButtonSelf';
 import VerifyButtonKeccit from '../components/VerifyButtonKeccit';
 import useProvider from '../hooks/useProvider';
@@ -30,14 +30,14 @@ function IndexPage() {
     const storageButtons = (
         <Group my="md" position="center">
             <StorageButtonSelf fileHash={fileHash} provider={ethereum} />
-            <StorageButtonKekkit />
+            <StorageButtonKeccit fileHash={fileHash} />
         </Group>
     );
     
     const verifyButtons = (
         <Group my="md" position="center">
             <VerifyButtonSelf fileHash={fileHash} provider={ethereum} />
-            <VerifyButtonKeccit />
+            <VerifyButtonKeccit fileHash={fileHash} />
         </Group>
     );
 

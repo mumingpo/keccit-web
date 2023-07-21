@@ -7,11 +7,11 @@ import Recaptcha from './Recaptcha';
 import { verify } from '../utils/KeccitWalletOps';
 
 type ComponentProps = {
-    hash: string,
+    fileHash: string,
 };
 
 function VerifyButtonKeccit(props: ComponentProps): JSX.Element {
-    const { hash } = props;
+    const { fileHash } = props;
     const [recaptchaElem, setRecaptchaElem] = React.useState<JSX.Element | null>(null);
 
     const onClick: React.MouseEventHandler = (e) => {
@@ -21,7 +21,7 @@ function VerifyButtonKeccit(props: ComponentProps): JSX.Element {
                 y={ e.clientY }
                 callback={ (token) => {
                     notifications.show({ message: token });
-                    verify({ hash, token });
+                    verify({ hash: fileHash, token });
                 } }
                 close={ () => { setRecaptchaElem(null); } }
             />
