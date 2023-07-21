@@ -15,8 +15,8 @@ function Terms(): JSX.Element {
                     implicit or explicit. We do not condone the use of our service for illegal
                     activities. We are not liable for any damage caused by
                     the use of our product except in cases mandated by applicable law. We do not
-                    seek to profit from user's activity on our site in any manner, so please
-                    don't sue us for some random non-sense reason, deal? 
+                    seek to profit from user&apos;s activity on our site in any manner, so please
+                    don&apos;t sue us for some random non-sense reason, deal? 
                 </Text>
             </Box>
         </Layout>

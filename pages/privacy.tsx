@@ -39,10 +39,10 @@ function Privacy(): JSX.Element {
                     which is sort of the point. We do not have any influence or capacity to alter
                     or delete any data once they have been commited onto a blockchain.
 
-                    However, we strive to protect user's privacy by hashing their data and introduce
+                    However, we strive to protect user&apos;s privacy by hashing their data and introduce
                     additional security measures like random nonces. As there are no known perspective
                     way to reverse secure hashing algorithms like keccak256, we believe that these measures
-                    are more than sufficient to keep user's data from abuse.
+                    are more than sufficient to keep user&apos;s data from abuse.
                 </Text>
             </Box>
         </Layout>

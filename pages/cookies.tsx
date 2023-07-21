@@ -17,7 +17,7 @@ function Cookies(): JSX.Element {
                     interests. If you object to the use of any cookies, please stop
                     using this website immediately, clear all cookies and cache,
                     turn off your computer, and yell at the wall all day.
-                    Honestly I don't even know why am I writing this. Want an
+                    Honestly I don&apos;t even know why am I writing this. Want an
                     actually good cookie recipe instead?
                 </Text>
             </Box>
