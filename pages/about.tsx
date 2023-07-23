@@ -64,7 +64,7 @@ function About(): JSX.Element {
                     Sample use case
                 </Title>
                 <P>
-                    Alice is hired for the daily upkeeping of Bob's front yard while
+                    Alice is hired for the daily upkeeping of Bob&apos;s front yard while
                     Bob is on vacation. Alice would need to keep for her record of
                     the daily states of the flower patches as a proof of her work.
                 </P>
@@ -91,7 +91,7 @@ function About(): JSX.Element {
                     Why does anybody need a service like Keccit at all?
                     <List m="md" sx={{ textIndent: 20 }}>
                         <List.Item>
-                            You don't need to upload the actual file at Keccit. Only the generated
+                            You don&apos;t need to upload the actual file at Keccit. Only the generated
                             hash signature is uploaded.
                         </List.Item>
                         <List.Item>
