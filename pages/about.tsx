@@ -159,7 +159,7 @@ function About(): JSX.Element {
                 </Title>
                 <P>
                     Not in a bajillion years (&quot;Computationally infeasible&quot;).
-                    This property of a cryptographic hash function is called
+                    This property of a cryptographic hash algorithm is called
                     &quot;collision resistance&quot;.
                 </P>
                 <Title m="md" order={3}>Ethereum blockchain</Title>
@@ -176,19 +176,22 @@ function About(): JSX.Element {
                     the relevant parts:
                     <List m="md">
                         <List.Item>
-                            The Ethereum blockchain is composed of transactions.
+                            The Ethereum blockchain is composed of &quot;transactions&quot;.
                         </List.Item>
                         <List.Item>
                             Transactions are what a computer would write down if its
                             elementary school teacher asks it to &quot;show your work&quot;.
                         </List.Item>
                         <List.Item>
-                            Transactions are stored publicly and permanently.
+                            Transactions are processed in &quot;blocks&quot;.
+                        </List.Item>
+                        <List.Item>
+                            Transactions/blocks are stored publicly and permanently.
                         </List.Item>
                         <List.Item>
                             There is a financial incentive for the <Stuff /> to make sure
-                            all previous transactions on the network is done right, so
-                            all &quot;blocks&quot; mined after your transaction would
+                            all previous transactions on the blockchain are done right, so
+                            all blocks mined after the block containing your transaction would
                             vouch for your transaction&apos;s integrity.
                         </List.Item>
                         <List.Item>
